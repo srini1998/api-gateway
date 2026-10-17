@@ -247,3 +247,17 @@ class TestGatewayProxy:
         await gw.proxy_request("/api/x", _http_client=_mock_client())
         await gw.proxy_request("/api/x", _http_client=_mock_client())
         assert gw.total_requests == 2
+
+
+def test_half_open_reserves_only_one_outstanding_probe():
+    b=Backend("http://localhost:8001");b.circuit_breaker.state=CircuitState.HALF_OPEN
+    lb=LoadBalancer([b])
+    assert lb.next() is b
+    assert lb.next() is None
+    b.circuit_breaker.record_success()
+    assert lb.next() is b
+
+def test_route_prefix_obeys_path_segment_boundary():
+    b=Backend("http://localhost:8001");g=Gateway(GatewayConfig(routes=[Route("/api",[b])]))
+    assert g.route_request("/apiary") is None
+    assert g.route_request("/api?x=1") is b

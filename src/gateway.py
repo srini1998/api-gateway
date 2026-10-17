@@ -42,12 +42,14 @@ class CircuitBreaker:
     state: CircuitState = CircuitState.CLOSED
     failure_count: int = 0
     success_count: int = 0
+    probe_in_flight: bool = False
     last_failure_time: float = 0.0
     opened_at: float = 0.0
     recent_failures: deque = field(default_factory=lambda: deque())
 
     def record_success(self):
         self.success_count += 1
+        self.probe_in_flight = False
         if self.state == CircuitState.HALF_OPEN:
             self.state = CircuitState.CLOSED
             self.failure_count = 0
@@ -56,6 +58,8 @@ class CircuitBreaker:
 
     def record_failure(self):
         now = time.time()
+        was_probe = self.state == CircuitState.HALF_OPEN
+        self.probe_in_flight = False
         self.failure_count += 1
         self.last_failure_time = now
         self.recent_failures.append(now)
@@ -64,7 +68,7 @@ class CircuitBreaker:
         while self.recent_failures and self.recent_failures[0] < cutoff:
             self.recent_failures.popleft()
 
-        if len(self.recent_failures) >= self.failure_threshold:
+        if was_probe or len(self.recent_failures) >= self.failure_threshold:
             if self.state != CircuitState.OPEN:
                 self.state = CircuitState.OPEN
                 self.opened_at = now
@@ -79,8 +83,8 @@ class CircuitBreaker:
                 logger.info("Circuit HALF_OPEN — sending probe request")
                 return True
             return False
-        # HALF_OPEN: allow one request through
-        return True
+        # Reservation is taken only for the backend selected by LoadBalancer.
+        return not self.probe_in_flight
 
 # ── Backend ───────────────────────────────────────────────────────────────────
 
@@ -141,6 +145,8 @@ class LoadBalancer:
         if not pool: pool = available
         backend = pool[self._index % len(pool)]
         self._index = (self._index + 1) % len(pool)
+        if backend.circuit_breaker.state == CircuitState.HALF_OPEN:
+            backend.circuit_breaker.probe_in_flight = True
         return backend
 
     def refresh_pool(self):
@@ -255,7 +261,9 @@ class Gateway:
         # Longest prefix match
         best = None
         for route in self.config.routes:
-            if path.startswith(route.prefix):
+            route_path = path.split("?",1)[0]
+            prefix = route.prefix.rstrip("/")
+            if not prefix or route_path == prefix or route_path.startswith(prefix + "/"):
                 if best is None or len(route.prefix) > len(best.prefix):
                     best = route
         return best
