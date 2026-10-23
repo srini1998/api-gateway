@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd site && npm ci",
+  "buildCommand": "cd site && npm test && npm run build",
+  "outputDirectory": "site/dist",
+  "functions": { "api/verify.py": { "maxDuration": 10, "memory": 512 } }
+}

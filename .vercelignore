@@ -1,0 +1,7 @@
+.venv
+.pytest_cache
+site/node_modules
+site/dist
+docs
+Dockerfile
+render.yaml
