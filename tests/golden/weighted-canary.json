@@ -1,0 +1,2879 @@
+{
+ "name": "weighted-canary",
+ "config": {
+  "backends": [
+   {
+    "id": "S1",
+    "weight": 3
+   },
+   {
+    "id": "S2",
+    "weight": 1
+   },
+   {
+    "id": "K1",
+    "pool": "canary",
+    "error_rate": 0.3
+   }
+  ],
+  "rate_capacity": 1000,
+  "rate_refill_per_s": 1000,
+  "canary_percent": 40
+ },
+ "arrivals": [
+  {
+   "id": 0,
+   "t": 0.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 1,
+   "t": 7.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 2,
+   "t": 14.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 3,
+   "t": 21.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 4,
+   "t": 28.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 5,
+   "t": 35.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 6,
+   "t": 42.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 7,
+   "t": 49.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 8,
+   "t": 56.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 9,
+   "t": 63.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 10,
+   "t": 70.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 11,
+   "t": 77.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 12,
+   "t": 84.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 13,
+   "t": 91.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 14,
+   "t": 98.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 15,
+   "t": 105.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 16,
+   "t": 112.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 17,
+   "t": 119.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 18,
+   "t": 126.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 19,
+   "t": 133.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 20,
+   "t": 140.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 21,
+   "t": 147.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 22,
+   "t": 154.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 23,
+   "t": 161.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 24,
+   "t": 168.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 25,
+   "t": 175.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 26,
+   "t": 182.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 27,
+   "t": 189.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 28,
+   "t": 196.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 29,
+   "t": 203.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 30,
+   "t": 210.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 31,
+   "t": 217.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 32,
+   "t": 224.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 33,
+   "t": 231.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 34,
+   "t": 238.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 35,
+   "t": 245.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 36,
+   "t": 252.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 37,
+   "t": 259.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 38,
+   "t": 266.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 39,
+   "t": 273.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 40,
+   "t": 280.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 41,
+   "t": 287.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 42,
+   "t": 294.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 43,
+   "t": 301.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 44,
+   "t": 308.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 45,
+   "t": 315.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 46,
+   "t": 322.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 47,
+   "t": 329.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 48,
+   "t": 336.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 49,
+   "t": 343.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 50,
+   "t": 350.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 51,
+   "t": 357.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 52,
+   "t": 364.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 53,
+   "t": 371.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 54,
+   "t": 378.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 55,
+   "t": 385.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 56,
+   "t": 392.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 57,
+   "t": 399.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 58,
+   "t": 406.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 59,
+   "t": 413.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 60,
+   "t": 420.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 61,
+   "t": 427.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 62,
+   "t": 434.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 63,
+   "t": 441.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 64,
+   "t": 448.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 65,
+   "t": 455.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 66,
+   "t": 462.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 67,
+   "t": 469.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 68,
+   "t": 476.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 69,
+   "t": 483.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 70,
+   "t": 490.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 71,
+   "t": 497.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 72,
+   "t": 504.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 73,
+   "t": 511.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 74,
+   "t": 518.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 75,
+   "t": 525.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 76,
+   "t": 532.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 77,
+   "t": 539.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 78,
+   "t": 546.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 79,
+   "t": 553.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 80,
+   "t": 560.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 81,
+   "t": 567.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 82,
+   "t": 574.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 83,
+   "t": 581.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 84,
+   "t": 588.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 85,
+   "t": 595.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 86,
+   "t": 602.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 87,
+   "t": 609.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 88,
+   "t": 616.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 89,
+   "t": 623.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 90,
+   "t": 630.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 91,
+   "t": 637.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 92,
+   "t": 644.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 93,
+   "t": 651.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 94,
+   "t": 658.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 95,
+   "t": 665.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 96,
+   "t": 672.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 97,
+   "t": 679.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 98,
+   "t": 686.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 99,
+   "t": 693.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 100,
+   "t": 700.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 101,
+   "t": 707.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 102,
+   "t": 714.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 103,
+   "t": 721.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 104,
+   "t": 728.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 105,
+   "t": 735.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 106,
+   "t": 742.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 107,
+   "t": 749.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 108,
+   "t": 756.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 109,
+   "t": 763.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 110,
+   "t": 770.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 111,
+   "t": 777.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 112,
+   "t": 784.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 113,
+   "t": 791.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 114,
+   "t": 798.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 115,
+   "t": 805.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 116,
+   "t": 812.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 117,
+   "t": 819.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 118,
+   "t": 826.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 119,
+   "t": 833.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 120,
+   "t": 840.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 121,
+   "t": 847.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 122,
+   "t": 854.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 123,
+   "t": 861.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 124,
+   "t": 868.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 125,
+   "t": 875.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 126,
+   "t": 882.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 127,
+   "t": 889.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 128,
+   "t": 896.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 129,
+   "t": 903.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 130,
+   "t": 910.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 131,
+   "t": 917.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 132,
+   "t": 924.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 133,
+   "t": 931.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 134,
+   "t": 938.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 135,
+   "t": 945.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 136,
+   "t": 952.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 137,
+   "t": 959.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 138,
+   "t": 966.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 139,
+   "t": 973.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 140,
+   "t": 980.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 141,
+   "t": 987.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 142,
+   "t": 994.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 143,
+   "t": 1001.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 144,
+   "t": 1008.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 145,
+   "t": 1015.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 146,
+   "t": 1022.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 147,
+   "t": 1029.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 148,
+   "t": 1036.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 149,
+   "t": 1043.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 150,
+   "t": 1050.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 151,
+   "t": 1057.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 152,
+   "t": 1064.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 153,
+   "t": 1071.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 154,
+   "t": 1078.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 155,
+   "t": 1085.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 156,
+   "t": 1092.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 157,
+   "t": 1099.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 158,
+   "t": 1106.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 159,
+   "t": 1113.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 160,
+   "t": 1120.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 161,
+   "t": 1127.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 162,
+   "t": 1134.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 163,
+   "t": 1141.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 164,
+   "t": 1148.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 165,
+   "t": 1155.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 166,
+   "t": 1162.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 167,
+   "t": 1169.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 168,
+   "t": 1176.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 169,
+   "t": 1183.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 170,
+   "t": 1190.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 171,
+   "t": 1197.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 172,
+   "t": 1204.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 173,
+   "t": 1211.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 174,
+   "t": 1218.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 175,
+   "t": 1225.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 176,
+   "t": 1232.0,
+   "client": "c15",
+   "path": "/api/orders"
+  },
+  {
+   "id": 177,
+   "t": 1239.0,
+   "client": "c16",
+   "path": "/api/orders"
+  },
+  {
+   "id": 178,
+   "t": 1246.0,
+   "client": "c17",
+   "path": "/api/orders"
+  },
+  {
+   "id": 179,
+   "t": 1253.0,
+   "client": "c18",
+   "path": "/api/orders"
+  },
+  {
+   "id": 180,
+   "t": 1260.0,
+   "client": "c19",
+   "path": "/api/orders"
+  },
+  {
+   "id": 181,
+   "t": 1267.0,
+   "client": "c20",
+   "path": "/api/orders"
+  },
+  {
+   "id": 182,
+   "t": 1274.0,
+   "client": "c21",
+   "path": "/api/orders"
+  },
+  {
+   "id": 183,
+   "t": 1281.0,
+   "client": "c22",
+   "path": "/api/orders"
+  },
+  {
+   "id": 184,
+   "t": 1288.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 185,
+   "t": 1295.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 186,
+   "t": 1302.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 187,
+   "t": 1309.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 188,
+   "t": 1316.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 189,
+   "t": 1323.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 190,
+   "t": 1330.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 191,
+   "t": 1337.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 192,
+   "t": 1344.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 193,
+   "t": 1351.0,
+   "client": "c9",
+   "path": "/api/orders"
+  },
+  {
+   "id": 194,
+   "t": 1358.0,
+   "client": "c10",
+   "path": "/api/orders"
+  },
+  {
+   "id": 195,
+   "t": 1365.0,
+   "client": "c11",
+   "path": "/api/orders"
+  },
+  {
+   "id": 196,
+   "t": 1372.0,
+   "client": "c12",
+   "path": "/api/orders"
+  },
+  {
+   "id": 197,
+   "t": 1379.0,
+   "client": "c13",
+   "path": "/api/orders"
+  },
+  {
+   "id": 198,
+   "t": 1386.0,
+   "client": "c14",
+   "path": "/api/orders"
+  },
+  {
+   "id": 199,
+   "t": 1393.0,
+   "client": "c15",
+   "path": "/api/orders"
+  }
+ ],
+ "actions": [],
+ "compact": [
+  [
+   0,
+   "ok",
+   200,
+   "canary",
+   "K1:error>K1:error>S1:ok",
+   195604
+  ],
+  [
+   1,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   66538
+  ],
+  [
+   2,
+   "ok",
+   200,
+   "canary",
+   "K1:ok",
+   64428
+  ],
+  [
+   3,
+   "ok",
+   200,
+   "canary",
+   "K1:error>K1:ok",
+   119088
+  ],
+  [
+   4,
+   "ok",
+   200,
+   "canary",
+   "K1:ok",
+   79066
+  ],
+  [
+   5,
+   "ok",
+   200,
+   "canary",
+   "K1:error>K1:ok",
+   152423
+  ],
+  [
+   6,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   92368
+  ],
+  [
+   7,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   96359
+  ],
+  [
+   8,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   106694
+  ],
+  [
+   9,
+   "ok",
+   200,
+   "canary",
+   "K1:error>S2:ok",
+   190946
+  ],
+  [
+   10,
+   "ok",
+   200,
+   "canary",
+   "K1:error>S2:ok",
+   178686
+  ],
+  [
+   11,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   127958
+  ],
+  [
+   12,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   136432
+  ],
+  [
+   13,
+   "ok",
+   200,
+   "canary",
+   "K1:ok",
+   150319
+  ],
+  [
+   14,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   138799
+  ],
+  [
+   15,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   152139
+  ],
+  [
+   16,
+   "ok",
+   200,
+   "canary",
+   "K1:error>S2:ok",
+   216698
+  ],
+  [
+   17,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   167534
+  ],
+  [
+   18,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   180065
+  ],
+  [
+   19,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   175775
+  ],
+  [
+   20,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   183807
+  ],
+  [
+   21,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   200685
+  ],
+  [
+   22,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   210531
+  ],
+  [
+   23,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   219397
+  ],
+  [
+   24,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   225821
+  ],
+  [
+   25,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   231759
+  ],
+  [
+   26,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   241277
+  ],
+  [
+   27,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   239971
+  ],
+  [
+   28,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   236113
+  ],
+  [
+   29,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   249561
+  ],
+  [
+   30,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   260989
+  ],
+  [
+   31,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   276538
+  ],
+  [
+   32,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   280463
+  ],
+  [
+   33,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   283847
+  ],
+  [
+   34,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   289033
+  ],
+  [
+   35,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   289736
+  ],
+  [
+   36,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   292481
+  ],
+  [
+   37,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   315667
+  ],
+  [
+   38,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   306288
+  ],
+  [
+   39,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   324897
+  ],
+  [
+   40,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   339897
+  ],
+  [
+   41,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   346725
+  ],
+  [
+   42,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   350098
+  ],
+  [
+   43,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   357602
+  ],
+  [
+   44,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   367883
+  ],
+  [
+   45,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   366337
+  ],
+  [
+   46,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   369923
+  ],
+  [
+   47,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   385270
+  ],
+  [
+   48,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   390718
+  ],
+  [
+   49,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   402804
+  ],
+  [
+   50,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   404729
+  ],
+  [
+   51,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   406784
+  ],
+  [
+   52,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   415680
+  ],
+  [
+   53,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   428078
+  ],
+  [
+   54,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   429097
+  ],
+  [
+   55,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   435512
+  ],
+  [
+   56,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   437012
+  ],
+  [
+   57,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   448550
+  ],
+  [
+   58,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   446064
+  ],
+  [
+   59,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   453482
+  ],
+  [
+   60,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   477526
+  ],
+  [
+   61,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   468202
+  ],
+  [
+   62,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   482100
+  ],
+  [
+   63,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   495646
+  ],
+  [
+   64,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   495200
+  ],
+  [
+   65,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   509214
+  ],
+  [
+   66,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   512599
+  ],
+  [
+   67,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   517243
+  ],
+  [
+   68,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   521852
+  ],
+  [
+   69,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   538529
+  ],
+  [
+   70,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   535043
+  ],
+  [
+   71,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   553547
+  ],
+  [
+   72,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   552596
+  ],
+  [
+   73,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   569406
+  ],
+  [
+   74,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   565228
+  ],
+  [
+   75,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   581606
+  ],
+  [
+   76,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   591491
+  ],
+  [
+   77,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   587726
+  ],
+  [
+   78,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   596740
+  ],
+  [
+   79,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   610683
+  ],
+  [
+   80,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   619720
+  ],
+  [
+   81,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   616912
+  ],
+  [
+   82,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   627953
+  ],
+  [
+   83,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   632013
+  ],
+  [
+   84,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   631247
+  ],
+  [
+   85,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   642816
+  ],
+  [
+   86,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   659120
+  ],
+  [
+   87,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   654907
+  ],
+  [
+   88,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   669669
+  ],
+  [
+   89,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   682292
+  ],
+  [
+   90,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   675192
+  ],
+  [
+   91,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   691407
+  ],
+  [
+   92,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   699683
+  ],
+  [
+   93,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   710254
+  ],
+  [
+   94,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   717575
+  ],
+  [
+   95,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   715768
+  ],
+  [
+   96,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   726271
+  ],
+  [
+   97,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   731474
+  ],
+  [
+   98,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   738430
+  ],
+  [
+   99,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   738438
+  ],
+  [
+   100,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   749651
+  ],
+  [
+   101,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   761450
+  ],
+  [
+   102,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   765190
+  ],
+  [
+   103,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   778760
+  ],
+  [
+   104,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   771065
+  ],
+  [
+   105,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   780738
+  ],
+  [
+   106,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   789855
+  ],
+  [
+   107,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   806145
+  ],
+  [
+   108,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   814159
+  ],
+  [
+   109,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   812862
+  ],
+  [
+   110,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   823518
+  ],
+  [
+   111,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   823670
+  ],
+  [
+   112,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   843392
+  ],
+  [
+   113,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   831053
+  ],
+  [
+   114,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   853052
+  ],
+  [
+   115,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   846650
+  ],
+  [
+   116,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   857425
+  ],
+  [
+   117,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   864243
+  ],
+  [
+   118,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   880391
+  ],
+  [
+   119,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   881933
+  ],
+  [
+   120,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   881647
+  ],
+  [
+   121,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   894624
+  ],
+  [
+   122,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   907826
+  ],
+  [
+   123,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   910950
+  ],
+  [
+   124,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   917653
+  ],
+  [
+   125,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   925885
+  ],
+  [
+   126,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   937445
+  ],
+  [
+   127,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   942836
+  ],
+  [
+   128,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   936738
+  ],
+  [
+   129,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   957343
+  ],
+  [
+   130,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   955637
+  ],
+  [
+   131,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   969887
+  ],
+  [
+   132,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   965895
+  ],
+  [
+   133,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   990768
+  ],
+  [
+   134,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   983155
+  ],
+  [
+   135,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   986415
+  ],
+  [
+   136,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1000529
+  ],
+  [
+   137,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1002245
+  ],
+  [
+   138,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1009409
+  ],
+  [
+   139,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1017092
+  ],
+  [
+   140,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1020616
+  ],
+  [
+   141,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1045805
+  ],
+  [
+   142,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1043674
+  ],
+  [
+   143,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1055101
+  ],
+  [
+   144,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1058361
+  ],
+  [
+   145,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1066905
+  ],
+  [
+   146,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1078903
+  ],
+  [
+   147,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1080403
+  ],
+  [
+   148,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1077115
+  ],
+  [
+   149,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1088456
+  ],
+  [
+   150,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1095670
+  ],
+  [
+   151,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1112866
+  ],
+  [
+   152,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1121320
+  ],
+  [
+   153,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1125153
+  ],
+  [
+   154,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1130752
+  ],
+  [
+   155,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1138760
+  ],
+  [
+   156,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1140066
+  ],
+  [
+   157,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1145547
+  ],
+  [
+   158,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1155930
+  ],
+  [
+   159,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1166503
+  ],
+  [
+   160,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1174223
+  ],
+  [
+   161,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1181758
+  ],
+  [
+   162,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1182803
+  ],
+  [
+   163,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1197310
+  ],
+  [
+   164,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1199077
+  ],
+  [
+   165,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1208189
+  ],
+  [
+   166,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1203554
+  ],
+  [
+   167,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1227904
+  ],
+  [
+   168,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1226236
+  ],
+  [
+   169,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1229326
+  ],
+  [
+   170,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1231260
+  ],
+  [
+   171,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1245931
+  ],
+  [
+   172,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1253844
+  ],
+  [
+   173,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1268096
+  ],
+  [
+   174,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1268691
+  ],
+  [
+   175,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1268329
+  ],
+  [
+   176,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1275479
+  ],
+  [
+   177,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1293029
+  ],
+  [
+   178,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1290319
+  ],
+  [
+   179,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1302638
+  ],
+  [
+   180,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1306239
+  ],
+  [
+   181,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1325805
+  ],
+  [
+   182,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1325022
+  ],
+  [
+   183,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1327001
+  ],
+  [
+   184,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1340690
+  ],
+  [
+   185,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1345936
+  ],
+  [
+   186,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1355440
+  ],
+  [
+   187,
+   "ok",
+   200,
+   "canary",
+   "S2:ok",
+   1363824
+  ],
+  [
+   188,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1371541
+  ],
+  [
+   189,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1378052
+  ],
+  [
+   190,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1382300
+  ],
+  [
+   191,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1390503
+  ],
+  [
+   192,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1398442
+  ],
+  [
+   193,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1408185
+  ],
+  [
+   194,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1410535
+  ],
+  [
+   195,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1410099
+  ],
+  [
+   196,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1416067
+  ],
+  [
+   197,
+   "ok",
+   200,
+   "canary",
+   "S1:ok",
+   1419754
+  ],
+  [
+   198,
+   "ok",
+   200,
+   "stable",
+   "S1:ok",
+   1436373
+  ],
+  [
+   199,
+   "ok",
+   200,
+   "stable",
+   "S2:ok",
+   1438426
+  ]
+ ],
+ "digest": "95f602f8cde79bc7e8ee407233176d143c3b7094b15386d9a5e58fbddfadeae5",
+ "summary": {
+  "now": 1438.4263566853479,
+  "completed": 200,
+  "pending": 0,
+  "outcomes": {
+   "ok": 200
+  },
+  "p50_ms": 51.077921888791025,
+  "p95_ms": 59.76800285745412,
+  "retries_used": 7,
+  "retries_denied": 0,
+  "backends": [
+   {
+    "id": "S1",
+    "state": "closed",
+    "requests": 146,
+    "errors": 0,
+    "in_flight": 0,
+    "peak_in_flight": 9,
+    "transitions": []
+   },
+   {
+    "id": "S2",
+    "state": "closed",
+    "requests": 49,
+    "errors": 0,
+    "in_flight": 0,
+    "peak_in_flight": 3,
+    "transitions": []
+   },
+   {
+    "id": "K1",
+    "state": "open",
+    "requests": 12,
+    "errors": 7,
+    "in_flight": 0,
+    "peak_in_flight": 7,
+    "transitions": [
+     {
+      "t": 118.89526431681588,
+      "from": "closed",
+      "to": "open"
+     }
+    ]
+   }
+  ]
+ },
+ "rng_seed1": [
+  0.6270739405881613
+ ]
+}

@@ -1,0 +1,4361 @@
+{
+ "name": "kill-and-recover",
+ "config": {
+  "backends": [
+   {
+    "id": "A",
+    "weight": 1,
+    "latency_ms": 40,
+    "jitter_ms": 10
+   },
+   {
+    "id": "B",
+    "weight": 1,
+    "latency_ms": 40,
+    "jitter_ms": 10
+   },
+   {
+    "id": "C",
+    "weight": 1,
+    "latency_ms": 40,
+    "jitter_ms": 10
+   }
+  ],
+  "rate_capacity": 1000,
+  "rate_refill_per_s": 1000,
+  "breaker_threshold": 3,
+  "breaker_recovery_ms": 800
+ },
+ "arrivals": [
+  {
+   "id": 0,
+   "t": 0.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 1,
+   "t": 12.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 2,
+   "t": 24.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 3,
+   "t": 36.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 4,
+   "t": 48.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 5,
+   "t": 60.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 6,
+   "t": 72.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 7,
+   "t": 84.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 8,
+   "t": 96.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 9,
+   "t": 108.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 10,
+   "t": 120.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 11,
+   "t": 132.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 12,
+   "t": 144.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 13,
+   "t": 156.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 14,
+   "t": 168.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 15,
+   "t": 180.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 16,
+   "t": 192.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 17,
+   "t": 204.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 18,
+   "t": 216.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 19,
+   "t": 228.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 20,
+   "t": 240.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 21,
+   "t": 252.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 22,
+   "t": 264.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 23,
+   "t": 276.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 24,
+   "t": 288.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 25,
+   "t": 300.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 26,
+   "t": 312.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 27,
+   "t": 324.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 28,
+   "t": 336.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 29,
+   "t": 348.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 30,
+   "t": 360.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 31,
+   "t": 372.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 32,
+   "t": 384.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 33,
+   "t": 396.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 34,
+   "t": 408.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 35,
+   "t": 420.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 36,
+   "t": 432.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 37,
+   "t": 444.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 38,
+   "t": 456.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 39,
+   "t": 468.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 40,
+   "t": 480.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 41,
+   "t": 492.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 42,
+   "t": 504.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 43,
+   "t": 516.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 44,
+   "t": 528.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 45,
+   "t": 540.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 46,
+   "t": 552.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 47,
+   "t": 564.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 48,
+   "t": 576.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 49,
+   "t": 588.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 50,
+   "t": 600.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 51,
+   "t": 612.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 52,
+   "t": 624.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 53,
+   "t": 636.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 54,
+   "t": 648.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 55,
+   "t": 660.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 56,
+   "t": 672.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 57,
+   "t": 684.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 58,
+   "t": 696.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 59,
+   "t": 708.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 60,
+   "t": 720.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 61,
+   "t": 732.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 62,
+   "t": 744.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 63,
+   "t": 756.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 64,
+   "t": 768.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 65,
+   "t": 780.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 66,
+   "t": 792.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 67,
+   "t": 804.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 68,
+   "t": 816.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 69,
+   "t": 828.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 70,
+   "t": 840.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 71,
+   "t": 852.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 72,
+   "t": 864.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 73,
+   "t": 876.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 74,
+   "t": 888.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 75,
+   "t": 900.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 76,
+   "t": 912.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 77,
+   "t": 924.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 78,
+   "t": 936.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 79,
+   "t": 948.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 80,
+   "t": 960.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 81,
+   "t": 972.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 82,
+   "t": 984.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 83,
+   "t": 996.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 84,
+   "t": 1008.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 85,
+   "t": 1020.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 86,
+   "t": 1032.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 87,
+   "t": 1044.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 88,
+   "t": 1056.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 89,
+   "t": 1068.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 90,
+   "t": 1080.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 91,
+   "t": 1092.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 92,
+   "t": 1104.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 93,
+   "t": 1116.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 94,
+   "t": 1128.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 95,
+   "t": 1140.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 96,
+   "t": 1152.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 97,
+   "t": 1164.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 98,
+   "t": 1176.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 99,
+   "t": 1188.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 100,
+   "t": 1200.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 101,
+   "t": 1212.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 102,
+   "t": 1224.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 103,
+   "t": 1236.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 104,
+   "t": 1248.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 105,
+   "t": 1260.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 106,
+   "t": 1272.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 107,
+   "t": 1284.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 108,
+   "t": 1296.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 109,
+   "t": 1308.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 110,
+   "t": 1320.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 111,
+   "t": 1332.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 112,
+   "t": 1344.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 113,
+   "t": 1356.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 114,
+   "t": 1368.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 115,
+   "t": 1380.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 116,
+   "t": 1392.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 117,
+   "t": 1404.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 118,
+   "t": 1416.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 119,
+   "t": 1428.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 120,
+   "t": 1440.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 121,
+   "t": 1452.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 122,
+   "t": 1464.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 123,
+   "t": 1476.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 124,
+   "t": 1488.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 125,
+   "t": 1500.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 126,
+   "t": 1512.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 127,
+   "t": 1524.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 128,
+   "t": 1536.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 129,
+   "t": 1548.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 130,
+   "t": 1560.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 131,
+   "t": 1572.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 132,
+   "t": 1584.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 133,
+   "t": 1596.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 134,
+   "t": 1608.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 135,
+   "t": 1620.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 136,
+   "t": 1632.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 137,
+   "t": 1644.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 138,
+   "t": 1656.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 139,
+   "t": 1668.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 140,
+   "t": 1680.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 141,
+   "t": 1692.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 142,
+   "t": 1704.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 143,
+   "t": 1716.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 144,
+   "t": 1728.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 145,
+   "t": 1740.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 146,
+   "t": 1752.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 147,
+   "t": 1764.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 148,
+   "t": 1776.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 149,
+   "t": 1788.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 150,
+   "t": 1800.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 151,
+   "t": 1812.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 152,
+   "t": 1824.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 153,
+   "t": 1836.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 154,
+   "t": 1848.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 155,
+   "t": 1860.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 156,
+   "t": 1872.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 157,
+   "t": 1884.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 158,
+   "t": 1896.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 159,
+   "t": 1908.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 160,
+   "t": 1920.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 161,
+   "t": 1932.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 162,
+   "t": 1944.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 163,
+   "t": 1956.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 164,
+   "t": 1968.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 165,
+   "t": 1980.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 166,
+   "t": 1992.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 167,
+   "t": 2004.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 168,
+   "t": 2016.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 169,
+   "t": 2028.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 170,
+   "t": 2040.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 171,
+   "t": 2052.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 172,
+   "t": 2064.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 173,
+   "t": 2076.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 174,
+   "t": 2088.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 175,
+   "t": 2100.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 176,
+   "t": 2112.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 177,
+   "t": 2124.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 178,
+   "t": 2136.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 179,
+   "t": 2148.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 180,
+   "t": 2160.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 181,
+   "t": 2172.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 182,
+   "t": 2184.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 183,
+   "t": 2196.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 184,
+   "t": 2208.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 185,
+   "t": 2220.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 186,
+   "t": 2232.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 187,
+   "t": 2244.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 188,
+   "t": 2256.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 189,
+   "t": 2268.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 190,
+   "t": 2280.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 191,
+   "t": 2292.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 192,
+   "t": 2304.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 193,
+   "t": 2316.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 194,
+   "t": 2328.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 195,
+   "t": 2340.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 196,
+   "t": 2352.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 197,
+   "t": 2364.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 198,
+   "t": 2376.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 199,
+   "t": 2388.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 200,
+   "t": 2400.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 201,
+   "t": 2412.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 202,
+   "t": 2424.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 203,
+   "t": 2436.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 204,
+   "t": 2448.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 205,
+   "t": 2460.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 206,
+   "t": 2472.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 207,
+   "t": 2484.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 208,
+   "t": 2496.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 209,
+   "t": 2508.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 210,
+   "t": 2520.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 211,
+   "t": 2532.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 212,
+   "t": 2544.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 213,
+   "t": 2556.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 214,
+   "t": 2568.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 215,
+   "t": 2580.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 216,
+   "t": 2592.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 217,
+   "t": 2604.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 218,
+   "t": 2616.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 219,
+   "t": 2628.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 220,
+   "t": 2640.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 221,
+   "t": 2652.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 222,
+   "t": 2664.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 223,
+   "t": 2676.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 224,
+   "t": 2688.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 225,
+   "t": 2700.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 226,
+   "t": 2712.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 227,
+   "t": 2724.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 228,
+   "t": 2736.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 229,
+   "t": 2748.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 230,
+   "t": 2760.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 231,
+   "t": 2772.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 232,
+   "t": 2784.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 233,
+   "t": 2796.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 234,
+   "t": 2808.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 235,
+   "t": 2820.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 236,
+   "t": 2832.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 237,
+   "t": 2844.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 238,
+   "t": 2856.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 239,
+   "t": 2868.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 240,
+   "t": 2880.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 241,
+   "t": 2892.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 242,
+   "t": 2904.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 243,
+   "t": 2916.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 244,
+   "t": 2928.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 245,
+   "t": 2940.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 246,
+   "t": 2952.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 247,
+   "t": 2964.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 248,
+   "t": 2976.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 249,
+   "t": 2988.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 250,
+   "t": 3000.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 251,
+   "t": 3012.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 252,
+   "t": 3024.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 253,
+   "t": 3036.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 254,
+   "t": 3048.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 255,
+   "t": 3060.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 256,
+   "t": 3072.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 257,
+   "t": 3084.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 258,
+   "t": 3096.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 259,
+   "t": 3108.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 260,
+   "t": 3120.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 261,
+   "t": 3132.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 262,
+   "t": 3144.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 263,
+   "t": 3156.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 264,
+   "t": 3168.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 265,
+   "t": 3180.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 266,
+   "t": 3192.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 267,
+   "t": 3204.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 268,
+   "t": 3216.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 269,
+   "t": 3228.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 270,
+   "t": 3240.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 271,
+   "t": 3252.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 272,
+   "t": 3264.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 273,
+   "t": 3276.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 274,
+   "t": 3288.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 275,
+   "t": 3300.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 276,
+   "t": 3312.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 277,
+   "t": 3324.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 278,
+   "t": 3336.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 279,
+   "t": 3348.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 280,
+   "t": 3360.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 281,
+   "t": 3372.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 282,
+   "t": 3384.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 283,
+   "t": 3396.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 284,
+   "t": 3408.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 285,
+   "t": 3420.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 286,
+   "t": 3432.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 287,
+   "t": 3444.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 288,
+   "t": 3456.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 289,
+   "t": 3468.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 290,
+   "t": 3480.0,
+   "client": "c2",
+   "path": "/api/orders"
+  },
+  {
+   "id": 291,
+   "t": 3492.0,
+   "client": "c3",
+   "path": "/api/orders"
+  },
+  {
+   "id": 292,
+   "t": 3504.0,
+   "client": "c4",
+   "path": "/api/orders"
+  },
+  {
+   "id": 293,
+   "t": 3516.0,
+   "client": "c5",
+   "path": "/api/orders"
+  },
+  {
+   "id": 294,
+   "t": 3528.0,
+   "client": "c6",
+   "path": "/api/orders"
+  },
+  {
+   "id": 295,
+   "t": 3540.0,
+   "client": "c7",
+   "path": "/api/orders"
+  },
+  {
+   "id": 296,
+   "t": 3552.0,
+   "client": "c8",
+   "path": "/api/orders"
+  },
+  {
+   "id": 297,
+   "t": 3564.0,
+   "client": "c0",
+   "path": "/api/orders"
+  },
+  {
+   "id": 298,
+   "t": 3576.0,
+   "client": "c1",
+   "path": "/api/orders"
+  },
+  {
+   "id": 299,
+   "t": 3588.0,
+   "client": "c2",
+   "path": "/api/orders"
+  }
+ ],
+ "actions": [
+  {
+   "t": 600,
+   "op": "backend",
+   "id": "C",
+   "patch": {
+    "down": true
+   }
+  },
+  {
+   "t": 1500,
+   "op": "backend",
+   "id": "A",
+   "patch": {
+    "latency_ms": 400
+   }
+  },
+  {
+   "t": 2600,
+   "op": "backend",
+   "id": "C",
+   "patch": {
+    "down": false
+   }
+  },
+  {
+   "t": 2700,
+   "op": "canary",
+   "percent": 0
+  }
+ ],
+ "compact": [
+  [
+   0,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   40117
+  ],
+  [
+   1,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   61769
+  ],
+  [
+   2,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   69214
+  ],
+  [
+   3,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   80662
+  ],
+  [
+   4,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   93533
+  ],
+  [
+   5,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   102578
+  ],
+  [
+   6,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   119640
+  ],
+  [
+   7,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   125971
+  ],
+  [
+   8,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   138932
+  ],
+  [
+   9,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   150963
+  ],
+  [
+   10,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   162475
+  ],
+  [
+   11,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   173907
+  ],
+  [
+   12,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   185546
+  ],
+  [
+   13,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   201479
+  ],
+  [
+   14,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   208745
+  ],
+  [
+   15,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   225537
+  ],
+  [
+   16,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   238800
+  ],
+  [
+   17,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   250243
+  ],
+  [
+   18,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   264276
+  ],
+  [
+   19,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   269749
+  ],
+  [
+   20,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   284253
+  ],
+  [
+   21,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   292881
+  ],
+  [
+   22,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   307689
+  ],
+  [
+   23,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   320686
+  ],
+  [
+   24,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   335032
+  ],
+  [
+   25,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   343306
+  ],
+  [
+   26,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   353387
+  ],
+  [
+   27,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   373130
+  ],
+  [
+   28,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   377903
+  ],
+  [
+   29,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   391367
+  ],
+  [
+   30,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   406842
+  ],
+  [
+   31,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   417478
+  ],
+  [
+   32,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   430552
+  ],
+  [
+   33,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   437170
+  ],
+  [
+   34,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   454491
+  ],
+  [
+   35,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   469604
+  ],
+  [
+   36,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   477942
+  ],
+  [
+   37,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   493675
+  ],
+  [
+   38,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   504185
+  ],
+  [
+   39,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   513160
+  ],
+  [
+   40,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   527242
+  ],
+  [
+   41,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   539554
+  ],
+  [
+   42,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   549575
+  ],
+  [
+   43,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   560299
+  ],
+  [
+   44,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   575385
+  ],
+  [
+   45,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   583123
+  ],
+  [
+   46,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   592093
+  ],
+  [
+   47,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   613433
+  ],
+  [
+   48,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   622306
+  ],
+  [
+   49,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   634188
+  ],
+  [
+   50,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   647168
+  ],
+  [
+   51,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   654779
+  ],
+  [
+   52,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   670499
+  ],
+  [
+   53,
+   "ok",
+   200,
+   "stable",
+   "C:refused>B:ok",
+   704551
+  ],
+  [
+   54,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   696301
+  ],
+  [
+   55,
+   "ok",
+   200,
+   "stable",
+   "C:refused>A:ok",
+   719278
+  ],
+  [
+   56,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   713608
+  ],
+  [
+   57,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   732615
+  ],
+  [
+   58,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   742584
+  ],
+  [
+   59,
+   "ok",
+   200,
+   "stable",
+   "C:refused>B:ok",
+   771124
+  ],
+  [
+   60,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   767364
+  ],
+  [
+   61,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   777840
+  ],
+  [
+   62,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   792539
+  ],
+  [
+   63,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   801548
+  ],
+  [
+   64,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   813256
+  ],
+  [
+   65,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   822506
+  ],
+  [
+   66,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   836775
+  ],
+  [
+   67,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   844032
+  ],
+  [
+   68,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   856241
+  ],
+  [
+   69,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   876763
+  ],
+  [
+   70,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   880601
+  ],
+  [
+   71,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   896050
+  ],
+  [
+   72,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   911323
+  ],
+  [
+   73,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   919600
+  ],
+  [
+   74,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   935107
+  ],
+  [
+   75,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   945299
+  ],
+  [
+   76,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   956121
+  ],
+  [
+   77,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   966926
+  ],
+  [
+   78,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   983764
+  ],
+  [
+   79,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   990521
+  ],
+  [
+   80,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1008273
+  ],
+  [
+   81,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1016298
+  ],
+  [
+   82,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1033203
+  ],
+  [
+   83,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1039614
+  ],
+  [
+   84,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1056303
+  ],
+  [
+   85,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1069745
+  ],
+  [
+   86,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1076363
+  ],
+  [
+   87,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1089370
+  ],
+  [
+   88,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1104841
+  ],
+  [
+   89,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1117860
+  ],
+  [
+   90,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1124956
+  ],
+  [
+   91,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1138976
+  ],
+  [
+   92,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1149506
+  ],
+  [
+   93,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1157623
+  ],
+  [
+   94,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1171908
+  ],
+  [
+   95,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1188560
+  ],
+  [
+   96,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1194953
+  ],
+  [
+   97,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1210834
+  ],
+  [
+   98,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1225646
+  ],
+  [
+   99,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1230596
+  ],
+  [
+   100,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1247203
+  ],
+  [
+   101,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1259841
+  ],
+  [
+   102,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1273627
+  ],
+  [
+   103,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1285787
+  ],
+  [
+   104,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1293384
+  ],
+  [
+   105,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1307135
+  ],
+  [
+   106,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1318237
+  ],
+  [
+   107,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1330215
+  ],
+  [
+   108,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1338719
+  ],
+  [
+   109,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1352825
+  ],
+  [
+   110,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1367225
+  ],
+  [
+   111,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1377595
+  ],
+  [
+   112,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1392880
+  ],
+  [
+   113,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1397532
+  ],
+  [
+   114,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1410869
+  ],
+  [
+   115,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1423927
+  ],
+  [
+   116,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1440572
+  ],
+  [
+   117,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1453079
+  ],
+  [
+   118,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1460931
+  ],
+  [
+   119,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1474759
+  ],
+  [
+   120,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1483335
+  ],
+  [
+   121,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1501696
+  ],
+  [
+   122,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1504026
+  ],
+  [
+   123,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1523526
+  ],
+  [
+   124,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1528825
+  ],
+  [
+   125,
+   "ok",
+   200,
+   "stable",
+   "A:ok",
+   1542712
+  ],
+  [
+   126,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1554621
+  ],
+  [
+   127,
+   "ok",
+   200,
+   "stable",
+   "C:refused>B:ok",
+   1589456
+  ],
+  [
+   128,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1832929
+  ],
+  [
+   129,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1844445
+  ],
+  [
+   130,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1600854
+  ],
+  [
+   131,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1863104
+  ],
+  [
+   132,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1630913
+  ],
+  [
+   133,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1896219
+  ],
+  [
+   134,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1649063
+  ],
+  [
+   135,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1925806
+  ],
+  [
+   136,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1677442
+  ],
+  [
+   137,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1951349
+  ],
+  [
+   138,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1699032
+  ],
+  [
+   139,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1980538
+  ],
+  [
+   140,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1720369
+  ],
+  [
+   141,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   1994794
+  ],
+  [
+   142,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1752929
+  ],
+  [
+   143,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2025694
+  ],
+  [
+   144,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1774443
+  ],
+  [
+   145,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2044283
+  ],
+  [
+   146,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1793067
+  ],
+  [
+   147,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2076552
+  ],
+  [
+   148,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1818577
+  ],
+  [
+   149,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2092161
+  ],
+  [
+   150,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1847411
+  ],
+  [
+   151,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2106590
+  ],
+  [
+   152,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1873210
+  ],
+  [
+   153,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1881756
+  ],
+  [
+   154,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1893180
+  ],
+  [
+   155,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1908451
+  ],
+  [
+   156,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1915704
+  ],
+  [
+   157,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1933204
+  ],
+  [
+   158,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1943933
+  ],
+  [
+   159,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1955076
+  ],
+  [
+   160,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1967020
+  ],
+  [
+   161,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1975086
+  ],
+  [
+   162,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   1988965
+  ],
+  [
+   163,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2003111
+  ],
+  [
+   164,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2013195
+  ],
+  [
+   165,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2023916
+  ],
+  [
+   166,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2038594
+  ],
+  [
+   167,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2053452
+  ],
+  [
+   168,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2062952
+  ],
+  [
+   169,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2075626
+  ],
+  [
+   170,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2084922
+  ],
+  [
+   171,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2097345
+  ],
+  [
+   172,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2108816
+  ],
+  [
+   173,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2123625
+  ],
+  [
+   174,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2128065
+  ],
+  [
+   175,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2146649
+  ],
+  [
+   176,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2157359
+  ],
+  [
+   177,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2166939
+  ],
+  [
+   178,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2182951
+  ],
+  [
+   179,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2189039
+  ],
+  [
+   180,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2201190
+  ],
+  [
+   181,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2216534
+  ],
+  [
+   182,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2232188
+  ],
+  [
+   183,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2241750
+  ],
+  [
+   184,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2253270
+  ],
+  [
+   185,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2266136
+  ],
+  [
+   186,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2277993
+  ],
+  [
+   187,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2291636
+  ],
+  [
+   188,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2304765
+  ],
+  [
+   189,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2314746
+  ],
+  [
+   190,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2321502
+  ],
+  [
+   191,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2341942
+  ],
+  [
+   192,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2353059
+  ],
+  [
+   193,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2363471
+  ],
+  [
+   194,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2376248
+  ],
+  [
+   195,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2381830
+  ],
+  [
+   196,
+   "ok",
+   200,
+   "stable",
+   "C:refused>B:ok",
+   2413591
+  ],
+  [
+   197,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2410458
+  ],
+  [
+   198,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2425383
+  ],
+  [
+   199,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2429511
+  ],
+  [
+   200,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2447328
+  ],
+  [
+   201,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2459142
+  ],
+  [
+   202,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2473763
+  ],
+  [
+   203,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2485714
+  ],
+  [
+   204,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2491860
+  ],
+  [
+   205,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2502749
+  ],
+  [
+   206,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2518615
+  ],
+  [
+   207,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2529395
+  ],
+  [
+   208,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2539801
+  ],
+  [
+   209,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2550461
+  ],
+  [
+   210,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2563986
+  ],
+  [
+   211,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2579623
+  ],
+  [
+   212,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2587241
+  ],
+  [
+   213,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2599348
+  ],
+  [
+   214,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2616880
+  ],
+  [
+   215,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2627297
+  ],
+  [
+   216,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2632155
+  ],
+  [
+   217,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2646072
+  ],
+  [
+   218,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2660611
+  ],
+  [
+   219,
+   "ok",
+   200,
+   "stable",
+   "A:timeout>B:ok",
+   2930558
+  ],
+  [
+   220,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2683696
+  ],
+  [
+   221,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2692062
+  ],
+  [
+   222,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2708256
+  ],
+  [
+   223,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2716430
+  ],
+  [
+   224,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2735720
+  ],
+  [
+   225,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2745415
+  ],
+  [
+   226,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2761858
+  ],
+  [
+   227,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2767333
+  ],
+  [
+   228,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2784167
+  ],
+  [
+   229,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2797365
+  ],
+  [
+   230,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2807058
+  ],
+  [
+   231,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2815030
+  ],
+  [
+   232,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2827407
+  ],
+  [
+   233,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2836616
+  ],
+  [
+   234,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2853781
+  ],
+  [
+   235,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2864586
+  ],
+  [
+   236,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2881049
+  ],
+  [
+   237,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2884140
+  ],
+  [
+   238,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2900806
+  ],
+  [
+   239,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2908501
+  ],
+  [
+   240,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2926773
+  ],
+  [
+   241,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2939809
+  ],
+  [
+   242,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2953291
+  ],
+  [
+   243,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2961281
+  ],
+  [
+   244,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2977239
+  ],
+  [
+   245,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2989097
+  ],
+  [
+   246,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   2996950
+  ],
+  [
+   247,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3006808
+  ],
+  [
+   248,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3025584
+  ],
+  [
+   249,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3031447
+  ],
+  [
+   250,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3047494
+  ],
+  [
+   251,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3059212
+  ],
+  [
+   252,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3072209
+  ],
+  [
+   253,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3083905
+  ],
+  [
+   254,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3089787
+  ],
+  [
+   255,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3107390
+  ],
+  [
+   256,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3117108
+  ],
+  [
+   257,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3133438
+  ],
+  [
+   258,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3137506
+  ],
+  [
+   259,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3150349
+  ],
+  [
+   260,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3164701
+  ],
+  [
+   261,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3176080
+  ],
+  [
+   262,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3190070
+  ],
+  [
+   263,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3196988
+  ],
+  [
+   264,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3216607
+  ],
+  [
+   265,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3228161
+  ],
+  [
+   266,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3238418
+  ],
+  [
+   267,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3252099
+  ],
+  [
+   268,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3257465
+  ],
+  [
+   269,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3274076
+  ],
+  [
+   270,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3289714
+  ],
+  [
+   271,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3298250
+  ],
+  [
+   272,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3305726
+  ],
+  [
+   273,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3325292
+  ],
+  [
+   274,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3328322
+  ],
+  [
+   275,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3345882
+  ],
+  [
+   276,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3355049
+  ],
+  [
+   277,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3365692
+  ],
+  [
+   278,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3380783
+  ],
+  [
+   279,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3397472
+  ],
+  [
+   280,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3406602
+  ],
+  [
+   281,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3415529
+  ],
+  [
+   282,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3427223
+  ],
+  [
+   283,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3442197
+  ],
+  [
+   284,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3448741
+  ],
+  [
+   285,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3460714
+  ],
+  [
+   286,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3479104
+  ],
+  [
+   287,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3484823
+  ],
+  [
+   288,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3505537
+  ],
+  [
+   289,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3516815
+  ],
+  [
+   290,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3524637
+  ],
+  [
+   291,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3534423
+  ],
+  [
+   292,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3545445
+  ],
+  [
+   293,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3563915
+  ],
+  [
+   294,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3572106
+  ],
+  [
+   295,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3587799
+  ],
+  [
+   296,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3598643
+  ],
+  [
+   297,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3605855
+  ],
+  [
+   298,
+   "ok",
+   200,
+   "stable",
+   "C:ok",
+   3624273
+  ],
+  [
+   299,
+   "ok",
+   200,
+   "stable",
+   "B:ok",
+   3632950
+  ]
+ ],
+ "digest": "940257ab81c1191bb0b06ab8b2125c728bc0d6716525cb6586ae17aa31d49109",
+ "summary": {
+  "now": 3632.9508770997636,
+  "completed": 300,
+  "pending": 0,
+  "outcomes": {
+   "ok": 300
+  },
+  "p50_ms": 45.8823040057905,
+  "p95_ms": 68.55195903754793,
+  "retries_used": 19,
+  "retries_denied": 0,
+  "backends": [
+   {
+    "id": "A",
+    "state": "open",
+    "requests": 69,
+    "errors": 14,
+    "in_flight": 0,
+    "peak_in_flight": 11,
+    "transitions": [
+     {
+      "t": 1822.0,
+      "from": "closed",
+      "to": "open"
+     },
+     {
+      "t": 2628.0,
+      "from": "open",
+      "to": "half_open"
+     },
+     {
+      "t": 2878.0,
+      "from": "half_open",
+      "to": "open"
+     }
+    ]
+   },
+   {
+    "id": "B",
+    "state": "closed",
+    "requests": 212,
+    "errors": 0,
+    "in_flight": 0,
+    "peak_in_flight": 7,
+    "transitions": []
+   },
+   {
+    "id": "C",
+    "state": "closed",
+    "requests": 38,
+    "errors": 5,
+    "in_flight": 0,
+    "peak_in_flight": 3,
+    "transitions": [
+     {
+      "t": 711.0,
+      "from": "closed",
+      "to": "open"
+     },
+     {
+      "t": 1512.0,
+      "from": "open",
+      "to": "half_open"
+     },
+     {
+      "t": 1527.0,
+      "from": "half_open",
+      "to": "open"
+     },
+     {
+      "t": 2328.0,
+      "from": "open",
+      "to": "half_open"
+     },
+     {
+      "t": 2355.0,
+      "from": "half_open",
+      "to": "open"
+     },
+     {
+      "t": 3156.0,
+      "from": "open",
+      "to": "half_open"
+     },
+     {
+      "t": 3216.607700385619,
+      "from": "half_open",
+      "to": "closed"
+     }
+    ]
+   }
+  ]
+ },
+ "rng_seed1": [
+  0.6270739405881613
+ ]
+}
