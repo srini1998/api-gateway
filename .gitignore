@@ -11,3 +11,4 @@ venv/
 reports/
 node_modules/
 .vercel
+.env*

@@ -4,5 +4,5 @@
   "installCommand": "cd site && npm ci",
   "buildCommand": "cd site && npm test && npm run build",
   "outputDirectory": "site/dist",
-  "functions": { "api/verify.py": { "maxDuration": 10, "memory": 512 } }
+  "functions": { "api/verify.py": { "maxDuration": 10 } }
 }
